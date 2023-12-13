@@ -34,7 +34,7 @@ const TableFakeStore = () => {
 
   return (
     <>
-    <table>
+    <table className={TableFakeStoreStyle.table}>
         <thead>
             <tr>
                 <td>Product</td>
