@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Form from '@/components/form/Form'
 import TableFakeStore from '@/components/tableFakeStore/TableFakeStore'
+import DeleteOneLetter from '@/components/deleteOneLetter/DeleteOneLetter'
 
 export default function Home() {
   return (
@@ -13,10 +14,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        
+
         <TableFakeStore></TableFakeStore>
 
         <Form></Form>
+
+        <DeleteOneLetter></DeleteOneLetter>
       </main>
     </>
   )
