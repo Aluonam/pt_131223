@@ -22,7 +22,7 @@ const ModalAnt = ({dataUser}) => {
         <p>{dataUser.text}</p>
         <p>{dataUser.password}</p>
         <p>{dataUser.gmail}</p>
-        <p>{dataUser.checkbox}</p> 
+        <p>{dataUser.checkbox ? "True": "False"}</p> 
       </Modal>
     </>
   );

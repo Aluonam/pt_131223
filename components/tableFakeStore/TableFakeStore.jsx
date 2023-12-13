@@ -14,7 +14,6 @@ const TableFakeStore = () => {
         try{
             const url = await fetch(`https://fakestoreapi.com/products?limit=5`);
             const data = await url.json();
-            console.log(data)
             setDataAPI(data)
         }catch(err){
             console.log(err, "error detected")
@@ -24,10 +23,10 @@ const TableFakeStore = () => {
     const dataTable = dataAPI.map((element)=>{
         return(
             <tr>
-                <td>{element.title}</td>
-                <td>{element.price}</td>
-                <td>{element.category}</td>
-                <td>{element.id}</td>
+                <td>{element?.title}</td>
+                <td>{element?.price}</td>
+                <td>{element?.category}</td>
+                <td>{element?.id}</td>
             </tr>
         )
     })
