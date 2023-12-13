@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
 
-const ModalAnt = () => {
+const ModalAnt = ({dataUser}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -15,12 +15,14 @@ const ModalAnt = () => {
   return (
     <>
       <Button type="primary" onClick={showModal}>
-        Open Modal
+        show form data
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+      <Modal title="Information:" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <p>{dataUser.number}</p>
+        <p>{dataUser.text}</p>
+        <p>{dataUser.password}</p>
+        <p>{dataUser.gmail}</p>
+        <p>{dataUser.checkbox}</p>
       </Modal>
     </>
   );
