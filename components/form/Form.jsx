@@ -3,17 +3,25 @@ import style from './Form.module.css'
 
 const Form = () => {
 
-    const [dataAPI, setDataAPI] = useState([])
+  const [dataUser, setdataUser] = useState([
+    {
+      number: '',
+      text:'',
+      password: '',
+      email: '',
+      checkbox: ''
+    }
+  ])
 
 
   return (
     <>
     <form>
-        <input type='number'></input>
-        <input type='text'></input>
-        <input type='password'></input>
-        <input type='number'></input>
-        <input type='number'></input>
+        <input type='number' value={dataUser.number}></input>
+        <input type='text' value={dataUser.text}></input>
+        <input type='password' value={dataUser.password}></input>
+        <input type='email' value={dataUser.email}></input>
+        <input type='checkbox' value={dataUser.checkbox}></input>
     </form>
     </>
   )
