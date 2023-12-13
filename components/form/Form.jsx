@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import style from './Form.module.css'
+import ModalAnt from './ModalAnt'
 
 const Form = () => {
 
@@ -16,6 +17,7 @@ const Form = () => {
         <input type='email' value={dataUser?.email}  onChange={(e)=>{setDataUser({...dataUser,email:e.target.value})}}></input>
         <input type='checkbox' value={dataUser?.checkbox}  onChange={(e)=>{setDataUser({...dataUser,checkbox:e.target.value})}}></input>
     </form>
+    <ModalAnt></ModalAnt>
     </>
   )
 }
