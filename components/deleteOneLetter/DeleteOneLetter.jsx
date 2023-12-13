@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const DeleteOneLetter = () => {
+
+    const [dataUser, setDataUser] = useState("")
+    const [letterUser, setLetterUser] = useState("")
   return (
-    <div>DeleteOneLetter</div>
+    <>
+    <h3>Write a sentence</h3>
+    <input onChange={(e)=>{e.target.value}}></input>
+    <br>
+    </br>
+    <h3>Write a letter</h3>
+    <input onChange={(e)=>{e.target.value}} maxlength="1"></input>
+    <button onClick={()=>{}}>Click delete letter</button>
+    </>
   )
 }
 
